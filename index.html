@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square Trail</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      font-family: 'EmberModernDisplayStd-Regular', sans-serif;
+    }
+    #uiPanel {
+      width: fit-content;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 10;
+    }
+    #topLeftInfo{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    #toggleUI {
+        font-family: 'EmberModernDisplayStd-Regular', sans-serif;
+        width: 100px;
+    }
+    label {
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+    }
+    .slider {
+      width: 150px;
+    }
+    #instructions {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="topLeftInfo">
+  <div id="uiPanel">
+    <label for="minSize">Min Size</label>
+    <input id="minSize" class="slider" type="range" min="5" max="100" value="15">
+    
+    <label for="maxSize">Max Size</label>
+    <input id="maxSize" class="slider" type="range" min="10" max="200" value="60">
+    
+    <label for="trailLength">Trail Length</label>
+    <input id="trailLength" class="slider" type="range" min="5" max="100" value="20">
+    
+    <label for="gap">Gap Between Boxes</label>
+    <input id="gap" class="slider" type="range" min="1" max="50" value="10">
+    
+    <label for="strokeWeight">Stroke Weight</label>
+    <input id="strokeWeight" class="slider" type="range" min="0" max="10" step="0.5" value="1">
+    
+    <p id="instructions">Press [C] to change color | Press [Space] to clear canvas</p>
+  </div>
+
+  <button id="toggleUI">Toggle UI</button>
+  </div>
+
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
